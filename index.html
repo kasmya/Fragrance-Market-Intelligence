@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Fragrance Market Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Jost:wght@200;300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ffffff;
+    --paper-2:#faf8f6;
+    --ink:#14100f;
+    --ink-soft:#4b4441;
+    --ink-faint:#8b807a;
+    --rule:#e6e0da;
+    --rule-strong:#cdc3b8;
+
+    --gilt:#a8843c;
+    --gilt-soft:#d8c79b;
+    --bordeaux:#6d2136;
+    --iris:#3f3670;
+    --jade:#2b6354;
+    --amber:#a96f23;
+    --rose:#9d4a5f;
+    --bronze:#7d6136;
+
+    --shadow:0 1px 1px rgba(20,16,15,.03), 0 18px 44px -30px rgba(20,16,15,.4);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
+    font-weight:300;
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    font-feature-settings:"liga" 1,"dlig" 1,"kern" 1;
+  }
+  h1,h2,h3,h5.serif,.serif{font-family:'Bodoni Moda',Didot,'Times New Roman',serif;font-weight:400;font-feature-settings:"liga" 1,"dlig" 1}
+  .script{font-family:'Pinyon Script',cursive;font-weight:400}
+  a{color:inherit}
+  :focus-visible{outline:1px solid var(--gilt);outline-offset:4px}
+
+  .wrap{max-width:1020px;margin:0 auto;padding:0 40px}
+  .hair{height:1px;background:var(--rule);border:none}
+
+  /* ---------- MASTHEAD ---------- */
+  .hero{padding:72px 0 0;text-align:center;border-bottom:1px solid var(--rule)}
+  .crest{
+    display:inline-flex;align-items:center;gap:16px;
+    font-size:11.5px;letter-spacing:.38em;text-indent:.38em;color:var(--ink-faint);
+  }
+  .crest::before,.crest::after{content:"";width:46px;height:1px;background:var(--gilt-soft)}
+  .hero h1{
+    font-size:clamp(50px,9vw,116px);
+    line-height:.92;
+    font-weight:400;
+    letter-spacing:-.015em;
+    margin:30px 0 0;
+  }
+  .hero h1 .script{
+    display:block;font-size:clamp(46px,8vw,104px);line-height:1;color:var(--gilt);
+    margin:-.06em 0 .02em;font-weight:400;letter-spacing:0;
+  }
+  .hero .rule-sm{width:56px;height:1px;background:var(--gilt);margin:34px auto 0}
+  .hero-lede{
+    max-width:60ch;margin:26px auto 0;color:var(--ink-soft);font-size:17px;
+  }
+  .spectrum{display:flex;height:3px;max-width:520px;margin:40px auto 0}
+  .spectrum span{flex:1}
+  .hero-meta{display:grid;grid-template-columns:repeat(4,1fr);margin-top:52px;border-top:1px solid var(--rule)}
+  .hero-meta div{padding:26px 14px 30px;border-right:1px solid var(--rule)}
+  .hero-meta div:last-child{border-right:none}
+  .hero-meta dt{font-size:10.5px;letter-spacing:.26em;text-indent:.26em;color:var(--ink-faint);margin-bottom:8px}
+  .hero-meta dd{font-family:'Bodoni Moda',serif;font-size:27px;line-height:1.2}
+  .hero-meta dd small{display:block;font-family:'Jost',sans-serif;font-size:12.5px;color:var(--ink-faint);letter-spacing:.02em;margin-top:4px}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:84px 0 0}
+  section:last-of-type{padding-bottom:90px}
+  .sec-head{text-align:center;margin-bottom:46px}
+  .sec-head .eyebrow{font-size:10.5px;letter-spacing:.34em;text-indent:.34em;color:var(--gilt)}
+  .sec-head h2{font-size:clamp(34px,5vw,50px);line-height:1.08;margin-top:12px}
+  .sec-head h2 em{font-family:'Bodoni Moda',serif;font-style:italic;color:var(--gilt)}
+  .sec-head p{color:var(--ink-faint);font-size:14.5px;margin-top:8px}
+  .sec-head .rule-sm{width:40px;height:1px;background:var(--gilt-soft);margin:22px auto 0}
+
+  .card{background:var(--paper);border:1px solid var(--rule);box-shadow:var(--shadow)}
+  .pad{padding:34px 38px}
+  .grid-2{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
+  h3{font-size:27px;line-height:1.22;margin-bottom:14px}
+  h4{font-size:10.5px;letter-spacing:.28em;text-indent:.28em;color:var(--ink-faint);margin-bottom:16px;font-weight:400}
+  p+p{margin-top:12px}
+  .lead{font-size:17px;color:var(--ink-soft)}
+  ul{list-style:none}
+  ul li{position:relative;padding-left:20px;margin-bottom:10px;font-size:15px;color:var(--ink-soft)}
+  ul li::before{content:"";position:absolute;left:0;top:.75em;width:8px;height:1px;background:var(--gilt)}
+  strong,ul li b{font-weight:500;color:var(--ink)}
+  .quote{
+    font-family:'Bodoni Moda',serif;font-style:italic;font-size:23px;line-height:1.45;
+    color:var(--ink);padding-left:22px;border-left:1px solid var(--gilt);
+  }
+  .meta-list dt{font-size:10.5px;letter-spacing:.24em;color:var(--ink-faint);margin-top:18px}
+  .meta-list dt:first-child{margin-top:0}
+  .meta-list dd{font-size:15px;color:var(--ink-soft)}
+
+  .method{display:grid;grid-template-columns:repeat(3,1fr);margin-top:24px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .method div{padding:30px 30px 34px;border-right:1px solid var(--rule)}
+  .method div:last-child{border-right:none}
+  .method .step{font-family:'Pinyon Script',cursive;font-size:26px;color:var(--gilt);line-height:1}
+  .method h5{font-family:'Bodoni Moda',serif;font-size:21px;font-weight:400;margin:6px 0 8px}
+  .method p{font-size:14.5px;color:var(--ink-soft)}
+
+  /* ---------- INSIGHTS ---------- */
+  .insight{margin-bottom:28px}
+  .insight-top{padding:32px 38px 26px;border-bottom:1px solid var(--rule);text-align:center}
+  .insight-top .num{font-family:'Bodoni Moda',serif;font-style:italic;font-size:17px;color:var(--gilt);display:block;margin-bottom:8px}
+  .insight-top h3{margin:0 auto;max-width:46ch;font-size:28px}
+  .insight-top .accent{width:34px;height:1px;margin:18px auto 0}
+  .insight-body{display:grid;grid-template-columns:1.12fr .88fr}
+  .insight-body > div{padding:30px 38px}
+  .insight-body > div:first-child{border-right:1px solid var(--rule)}
+  .conf{display:inline-block;padding:4px 14px;border:1px solid var(--rule-strong);font-size:10.5px;letter-spacing:.2em;text-indent:.2em;color:var(--ink-soft);margin-bottom:16px}
+  .conf-high{border-color:var(--jade);color:var(--jade)}
+  .conf-med{border-color:var(--amber);color:var(--amber)}
+  .watch{margin-top:16px;padding-top:14px;border-top:1px solid var(--rule);font-family:'Bodoni Moda',serif;font-style:italic;font-size:15px;color:var(--ink-faint)}
+  .so-what{padding:26px 38px;background:var(--paper-2);border-top:1px solid var(--rule)}
+  .so-what span{font-family:'Pinyon Script',cursive;font-size:24px;color:var(--gilt);display:block;line-height:1.2;margin-bottom:6px}
+  .so-what p{font-size:15.5px;color:var(--ink-soft);max-width:80ch}
+
+  /* ---------- CHARTS ---------- */
+  .chart{margin-bottom:28px}
+  .chart-head{padding:28px 38px 22px;border-bottom:1px solid var(--rule)}
+  .chart-head h3{margin-bottom:4px;font-size:25px}
+  .chart-head p{font-size:13.5px;color:var(--ink-faint)}
+  .chart-body{padding:32px 38px 14px}
+  .row{display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:center;margin-bottom:15px}
+  .row .lbl{font-size:13.5px;letter-spacing:.1em;color:var(--ink-faint);text-align:right}
+  .track{height:32px;border-bottom:1px solid var(--rule);position:relative}
+  .fill{height:100%;display:flex;align-items:center;padding-left:16px;color:#fff;font-size:13.5px;letter-spacing:.06em}
+  .fill.dark{color:var(--ink)}
+  .note{padding:20px 38px 26px;border-top:1px solid var(--rule);font-size:13.5px;color:var(--ink-faint)}
+
+  .mix{display:flex;height:44px;margin-bottom:18px}
+  .mix span{display:flex;align-items:center;justify-content:center;font-size:12.5px;letter-spacing:.06em;color:#fff}
+  .legend{display:flex;flex-wrap:wrap;gap:22px;font-size:13.5px;color:var(--ink-soft)}
+  .legend i{display:inline-block;width:14px;height:2px;margin-right:9px;vertical-align:middle}
+
+  .accord-row{display:grid;grid-template-columns:2px 1fr auto;gap:22px;align-items:center;padding:18px 0;border-bottom:1px solid var(--rule)}
+  .accord-row:last-child{border-bottom:none}
+  .accord-row .swatch{align-self:stretch}
+  .accord-row h5{font-family:'Bodoni Moda',serif;font-size:21px;font-weight:400}
+  .accord-row p{font-size:14px;color:var(--ink-faint)}
+  .tag{font-size:10.5px;letter-spacing:.2em;text-indent:.2em;padding:5px 14px;border:1px solid var(--rule-strong);color:var(--ink-soft);white-space:nowrap}
+
+  .owners{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .owner{padding:26px 28px;border-top:2px solid}
+  .owner h5{font-family:'Bodoni Moda',serif;font-size:24px;font-weight:400;margin-bottom:8px}
+  .owner p{font-size:14px;color:var(--ink-soft)}
+  .owner .brands{font-size:13.5px;color:var(--ink-faint);margin-top:10px;font-style:italic;font-family:'Bodoni Moda',serif}
+
+  /* ---------- LIMITS ---------- */
+  .limit{padding:28px 34px;border:1px solid var(--rule);border-left:2px solid var(--bordeaux);margin-bottom:14px;background:var(--paper)}
+  .limit h5{font-family:'Bodoni Moda',serif;font-size:23px;font-weight:400;margin-bottom:8px}
+  .limit p{font-size:15px;color:var(--ink-soft);max-width:84ch}
+
+  /* ---------- IMPLICATIONS ---------- */
+  .impl{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:40px}
+  .impl article{padding:30px 32px;border-top:2px solid var(--gilt)}
+  .impl h5{font-family:'Bodoni Moda',serif;font-size:24px;font-weight:400;margin-bottom:10px}
+  .impl p{font-size:15px;color:var(--ink-soft)}
+  .caution{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:20px 28px;margin-bottom:12px;border:1px solid var(--rule)}
+  .caution .mark{font-family:'Bodoni Moda',serif;font-style:italic;font-size:26px;color:var(--bordeaux);line-height:1.1}
+  .caution p{font-size:15px;color:var(--ink-soft)}
+
+  /* ---------- SUMMARY ---------- */
+  .summary{padding:56px 60px;border:1px solid var(--rule-strong);background:var(--paper-2);text-align:left}
+  .summary .script{font-size:34px;color:var(--gilt);line-height:1.1;display:block;text-align:center}
+  .summary .rule-sm{width:40px;height:1px;background:var(--gilt-soft);margin:18px auto 30px}
+  .summary p{font-size:17.5px;line-height:1.85;color:var(--ink-soft);max-width:72ch;margin:0 auto}
+  .summary p+p{margin-top:18px}
+  .summary strong{color:var(--ink);font-weight:400;font-family:'Bodoni Moda',serif;font-style:italic;font-size:18.5px}
+
+  /* ---------- DASHBOARD ---------- */
+  .dash{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:30px}
+  .dash article{padding:28px 30px;border-top:2px solid}
+  .dash h5{font-family:'Bodoni Moda',serif;font-size:23px;font-weight:400;margin-bottom:14px}
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  thead th{text-align:left;font-weight:400;font-size:10.5px;letter-spacing:.24em;color:var(--ink-faint);padding:16px 20px;border-bottom:1px solid var(--rule-strong)}
+  td{padding:16px 20px;border-bottom:1px solid var(--rule);color:var(--ink-soft)}
+  tbody tr:last-child td{border-bottom:none}
+  td:first-child{color:var(--ink)}
+  .pill{font-family:'Bodoni Moda',serif;font-style:italic;font-size:15px}
+  .p-hi{color:var(--bordeaux)}
+  .p-md{color:var(--amber)}
+  .p-lo{color:var(--jade)}
+
+  /* ---------- PROMPTS ---------- */
+  .prompt{padding:28px 32px;margin-bottom:16px}
+  .prompt h5{font-size:10.5px;letter-spacing:.26em;text-indent:.26em;color:var(--ink-faint);font-weight:400;margin-bottom:14px}
+  .prompt blockquote{font-family:'Bodoni Moda',serif;font-style:italic;font-size:20px;line-height:1.5;border-left:1px solid var(--gilt);padding-left:22px;margin-bottom:14px}
+  .prompt p{font-size:14.5px;color:var(--ink-soft)}
+
+  .slot{border:1px solid var(--rule);padding:24px 28px;margin-top:18px;background:var(--paper-2)}
+  .slot h5{font-family:'Bodoni Moda',serif;font-size:19px;font-weight:400;margin-bottom:4px}
+  .slot p{font-size:14px;color:var(--ink-faint)}
+
+  .scroll{overflow-x:auto}
+  footer{border-top:1px solid var(--rule);padding:34px 0 50px;color:var(--ink-faint);font-size:13px;text-align:center}
+  footer .script{font-size:24px;color:var(--gilt);display:block;margin-bottom:10px}
+
+  @media (max-width:880px){
+    .wrap{padding:0 22px}
+    .grid-2,.insight-body,.impl,.dash,.owners,.method{grid-template-columns:1fr}
+    .insight-body > div:first-child{border-right:none;border-bottom:1px solid var(--rule)}
+    .method div{border-right:none;border-bottom:1px solid var(--rule)}
+    .method div:last-child{border-bottom:none}
+    .hero-meta{grid-template-columns:1fr 1fr}
+    .hero-meta div:nth-child(2n){border-right:none}
+    .hero-meta div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+    .pad,.insight-top,.so-what,.chart-body,.chart-head,.note,.summary{padding-left:24px;padding-right:24px}
+    .summary{padding-top:38px;padding-bottom:38px}
+    .row{grid-template-columns:82px 1fr;gap:12px}
+    .row .lbl{font-size:12px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="crest">Market Intelligence</span>
+    <h1>The Economics<span class="script">of Scent</span>2026 &ndash; 2033</h1>
+    <div class="rule-sm"></div>
+    <p class="hero-lede">Where a fragrance house should place its money next: by concentration, scent family, channel and region. Built from seven published analyst forecasts and a community dataset of 59,325 rated perfumes.</p>
+    <div class="spectrum">
+      <span style="background:#6d2136"></span>
+      <span style="background:#9d4a5f"></span>
+      <span style="background:#a96f23"></span>
+      <span style="background:#a8843c"></span>
+      <span style="background:#7d6136"></span>
+      <span style="background:#2b6354"></span>
+      <span style="background:#3f3670"></span>
+    </div>
+    <dl class="hero-meta">
+      <div><dt>Size, 2026</dt><dd>$56&ndash;68B<small>Fine fragrance, analyst range</small></dd></div>
+      <div><dt>Growth</dt><dd>5.5&ndash;6.8%<small>Compound annual, to 2033</small></dd></div>
+      <div><dt>Evidence</dt><dd>Seven<small>Forecasts, plus one dataset</small></dd></div>
+      <div><dt>Confidence</dt><dd>High<small>On direction, medium on sizing</small></dd></div>
+    </dl>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="brief">
+  <div class="sec-head">
+    <span class="eyebrow">One</span>
+    <h2>The <em>brief</em></h2>
+    <p>What was asked, and how it was answered</p>
+    <div class="rule-sm"></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card pad">
+      <h3>The decision this supports</h3>
+      <p class="lead">A go to market call: which product tiers, scent families and regional markets justify investment between 2026 and 2030.</p>
+      <p class="quote" style="margin-top:24px;">Where should a new or expanding house concentrate spend, by scent family, concentration, price tier and geography, given how fast the category is consolidating?</p>
+    </div>
+    <div class="card pad">
+      <h4>Scope</h4>
+      <dl class="meta-list">
+        <dt>Covered</dt>
+        <dd>Fine fragrance worldwide, weighted to North America, Europe, Asia Pacific and the Gulf.</dd>
+        <dt>Players studied</dt>
+        <dd>L'Or&eacute;al, LVMH, Est&eacute;e Lauder, Puig, Coty, Interparfums, and independent houses.</dd>
+        <dt>Excluded</dt>
+        <dd>Home fragrance, deodorant and body spray, industrial scenting, grey market resale.</dd>
+        <dt>Known weak spots</dt>
+        <dd>Analyst sizing varies by scope definition. The Fragrantica dataset reflects enthusiasts, not average buyers.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="method">
+    <div>
+      <span class="step">First</span>
+      <h5>Size and shape the market</h5>
+      <p>Pulled current forecasts from seven research firms, then compared what each one counted before trusting any figure.</p>
+    </div>
+    <div>
+      <span class="step">Then</span>
+      <h5>Map who owns what</h5>
+      <p>Traced ownership and recent deals to see where growth is being bought rather than built.</p>
+    </div>
+    <div>
+      <span class="step">Finally</span>
+      <h5>Test against product data</h5>
+      <p>Used the Fragrantica dataset to check whether stated preference shows up in how perfumes are actually rated.</p>
+    </div>
+  </div>
+
+  <div class="slot">
+    <h5>Screenshot slot: Quick Research output</h5>
+    <p>Suggested query: global fragrance market size 2026, concentration mix, niche versus mass growth rates.</p>
+  </div>
+  <div class="slot">
+    <h5>Screenshot slot: agent conversation on the dataset</h5>
+    <p>Ask the agent to rank scent families by average rating and by number of rated releases, then capture the reply.</p>
+  </div>
+</section>
+
+<section id="insights">
+  <div class="sec-head">
+    <span class="eyebrow">Two</span>
+    <h2>Five <em>findings</em></h2>
+    <p>Each with evidence, a confidence call, and what would overturn it</p>
+    <div class="rule-sm"></div>
+  </div>
+
+  <article class="insight card">
+    <div class="insight-top">
+      <span class="num">i</span>
+      <h3>Growth is steady and broad, but it sits almost entirely in the premium tier</h3>
+      <div class="accent" style="background:#6d2136"></div>
+    </div>
+    <div class="insight-body">
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li>Grand View Research puts the fragrance market at <b>$61.4B in 2026</b>, reaching $89.4B by 2033 at 5.5% compound growth.</li>
+          <li>Persistence Market Research estimates <b>$61.9B in 2026</b> and $92.5B by 2033 at 5.9%. Fortune Business Insights sizes perfume alone at $55.8B in 2026.</li>
+          <li>Grand View reports fine fragrance growing at <b>6.7%</b>, faster than the total market, while mass priced product still holds the largest revenue share.</li>
+          <li>Technavio and MarkWide land in the same band, 5.5 to 6.8%, using different scope definitions.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Confidence</h4>
+        <span class="conf conf-high">High on direction</span>
+        <ul>
+          <li>Seven independent firms agree on direction and cluster tightly on rate.</li>
+          <li>Absolute size varies with scope. Firms counting deodorant and home scent report larger totals.</li>
+          <li>All reports reviewed are dated between October 2025 and June 2026.</li>
+        </ul>
+        <p class="watch">Would change this: a demand shock in North America, roughly a third of global revenue, would compress the whole forecast band.</p>
+      </div>
+    </div>
+    <div class="so-what">
+      <span>Why it matters</span>
+      <p>The category is a safe place to invest, but entering at mass price points means competing on shelf economics against players with far better cost positions. Premium concentration is where the growth rate actually lives.</p>
+    </div>
+  </article>
+
+  <article class="insight card">
+    <div class="insight-top">
+      <span class="num">ii</span>
+      <h3>Concentration is the clearest product signal: eau de parfum dominates, extrait grows fastest</h3>
+      <div class="accent" style="background:#a96f23"></div>
+    </div>
+    <div class="insight-body">
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li>Eau de parfum holds roughly <b>38 to 42%</b> of fragrance revenue in 2026 and is gaining share.</li>
+          <li>Eau de toilette sits near 32% and is losing share across the same forecasts.</li>
+          <li>Parfum and extrait hold a small base, near 9%, but carry the <b>fastest growth of any concentration</b> at roughly 9% a year.</li>
+          <li>The Fragrantica dataset agrees: eau de parfum is the most represented concentration among rated releases.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Confidence</h4>
+        <span class="conf conf-med">Medium</span>
+        <ul>
+          <li>Direction is corroborated widely, but the precise share split traces back to a single consolidated estimate.</li>
+          <li>Dataset agreement is supportive, not independent. Both reflect the same premiumising consumer.</li>
+        </ul>
+        <p class="watch">Would change this: retailer sell through data by concentration would move this from directional to decision grade.</p>
+      </div>
+    </div>
+    <div class="so-what">
+      <span>Why it matters</span>
+      <p>A launch at eau de parfum strength is the default the evidence supports. An extrait flanker buys access to the fastest growing slice without carrying the volume risk of leading with it.</p>
+    </div>
+  </article>
+
+  <article class="insight card">
+    <div class="insight-top">
+      <span class="num">iii</span>
+      <h3>The category is consolidating fast, and large groups are buying niche rather than building it</h3>
+      <div class="accent" style="background:#3f3670"></div>
+    </div>
+    <div class="insight-body">
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li>L'Or&eacute;al completed its <b>&euro;4B purchase of Kering Beaut&eacute; on 31 March 2026</b>, taking Creed plus fifty year licences for Bottega Veneta and Balenciaga.</li>
+          <li>The Gucci licence passes to L'Or&eacute;al when Coty's agreement expires in 2028, moving a major prestige line between groups.</li>
+          <li>Kering had bought Creed for about &euro;3.5B in 2023 and exited two years later, a reminder that niche multiples can be overpaid.</li>
+          <li>Est&eacute;e Lauder bought Tom Ford International for $2.3B and owns Le Labo, Jo Malone and Fr&eacute;d&eacute;ric Malle. Puig took majority control of Byredo in 2022.</li>
+          <li>Est&eacute;e Lauder has confirmed talks with Puig about a possible combination, reported in early 2026 and not concluded.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Confidence</h4>
+        <span class="conf conf-high">High</span>
+        <ul>
+          <li>Every transaction above is confirmed by company statements or major trade press.</li>
+          <li>Deal values are reported consistently across Reuters, WWD and company releases.</li>
+          <li>The Est&eacute;e Lauder and Puig discussion is talks only. Treat it as a scenario.</li>
+        </ul>
+        <p class="watch">Would change this: if the Creed pattern repeats, appetite for niche assets could cool and valuations would reset.</p>
+      </div>
+    </div>
+    <div class="so-what">
+      <span>Why it matters</span>
+      <p>Independence has a price attached to it. Groups are paying billions for what they cannot manufacture internally, which is credible independent authorship. That is the asset a new house is actually building.</p>
+    </div>
+  </article>
+
+  <article class="insight card">
+    <div class="insight-top">
+      <span class="num">iv</span>
+      <h3>North America is the revenue centre, Asia Pacific is the growth frontier</h3>
+      <div class="accent" style="background:#2b6354"></div>
+    </div>
+    <div class="insight-body">
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li>North America held the largest regional share in 2025, reported at <b>33.2% by Grand View</b> and 35.6% by Fortune Business Insights.</li>
+          <li>Both firms name Asia Pacific the fastest growing region, on rising incomes and wider prestige distribution.</li>
+          <li>Persistence notes particularly strong fine fragrance growth in China and India.</li>
+          <li>Online sales are growing several times faster than physical retail, lowering the cost of testing a new market.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Confidence</h4>
+        <span class="conf conf-med">Medium</span>
+        <ul>
+          <li>Regional ranking is consistent everywhere. Regional growth rates are not, and some published figures are implausibly high.</li>
+          <li>The Fragrantica dataset skews heavily Western, so it cannot validate Asian preference at all.</li>
+        </ul>
+        <p class="watch">Would change this: local panel data on scent preference in India and China. Without it, regional product decisions rest on assumption.</p>
+      </div>
+    </div>
+    <div class="so-what">
+      <span>Why it matters</span>
+      <p>Revenue today and growth tomorrow are in different places. Fund the launch where the money already is, then use online channels to test Asia Pacific before committing to retail infrastructure.</p>
+    </div>
+  </article>
+
+  <article class="insight card">
+    <div class="insight-top">
+      <span class="num">v</span>
+      <h3>Ingredient disclosure is shifting from marketing story to compliance requirement</h3>
+      <div class="accent" style="background:#7d6136"></div>
+    </div>
+    <div class="insight-body">
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li>EU allergen labelling obligations have expanded the list of substances that must be declared, with transition deadlines running through this decade.</li>
+          <li>IFRA standards continue to restrict or cap specific materials, forcing reformulation of existing lines.</li>
+          <li>Analyst commentary consistently lists transparency and sustainable sourcing among the strongest demand drivers, particularly in Europe.</li>
+          <li>Synthetics remain the majority of materials used, so this is a disclosure and sourcing question rather than a naturals debate.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Confidence</h4>
+        <span class="conf conf-med">Medium</span>
+        <ul>
+          <li>The regulatory direction is firm and documented. Willingness to pay a premium for it is not well measured.</li>
+          <li>Clean fragrance has no standard definition, which makes claims hard to verify and easy to challenge.</li>
+        </ul>
+        <p class="watch">Would change this: published willingness to pay research specific to fragrance would turn this from hygiene factor into positioning.</p>
+      </div>
+    </div>
+    <div class="so-what">
+      <span>Why it matters</span>
+      <p>Building disclosure into formulation now costs far less than retrofitting a launched line. Treat it as cost of entry in Europe rather than as a differentiator.</p>
+    </div>
+  </article>
+</section>
+
+<section id="evidence">
+  <div class="sec-head">
+    <span class="eyebrow">Three</span>
+    <h2>The <em>evidence</em></h2>
+    <p>Three views of the same market</p>
+    <div class="rule-sm"></div>
+  </div>
+
+  <div class="chart card">
+    <div class="chart-head">
+      <h3>Where analysts place the market</h3>
+      <p>Published estimates, plotted as reported rather than averaged</p>
+    </div>
+    <div class="chart-body">
+      <div class="row"><span class="lbl">2025 actual</span><div class="track"><div class="fill" style="width:53%;background:#6d2136">$53 to $59B</div></div></div>
+      <div class="row"><span class="lbl">2026 current</span><div class="track"><div class="fill" style="width:60%;background:#9d4a5f">$56 to $68B</div></div></div>
+      <div class="row"><span class="lbl">2030</span><div class="track"><div class="fill" style="width:76%;background:#a96f23">$80 to $90B</div></div></div>
+      <div class="row"><span class="lbl">2033</span><div class="track"><div class="fill" style="width:86%;background:#a8843c">$89 to $93B</div></div></div>
+      <div class="row"><span class="lbl">2035</span><div class="track"><div class="fill" style="width:96%;background:#2b6354">$98 to $106B</div></div></div>
+    </div>
+    <p class="note">Supports finding one. Ranges combine Grand View Research, Persistence Market Research, Fortune Business Insights, Technavio and MarkWide, published between October 2025 and June 2026. Bar widths are illustrative. The spread between firms is driven mostly by whether deodorant and home fragrance are counted, not by disagreement about growth.</p>
+    <div class="slot" style="margin:0 38px 28px;">
+      <h5>Screenshot slot: agent generated market size chart</h5>
+      <p>Replace this block with the visualisation produced in your own tooling.</p>
+    </div>
+  </div>
+
+  <div class="chart card">
+    <div class="chart-head">
+      <h3>Revenue by concentration, 2026</h3>
+      <p>Share today against direction of travel</p>
+    </div>
+    <div class="chart-body">
+      <div class="mix">
+        <span style="width:40%;background:#6d2136">Eau de parfum, 40%</span>
+        <span style="width:32%;background:#a96f23">Eau de toilette, 32%</span>
+        <span style="width:9%;background:#3f3670">9%</span>
+        <span style="width:19%;background:#7d6136">Other, 19%</span>
+      </div>
+      <div class="legend">
+        <span><i style="background:#6d2136"></i>Gaining share</span>
+        <span><i style="background:#a96f23"></i>Losing share</span>
+        <span><i style="background:#3f3670"></i>Extrait, fastest growth near 9% a year</span>
+        <span><i style="background:#7d6136"></i>Cologne, oils, mists</span>
+      </div>
+    </div>
+    <p class="note">Supports finding two. Share figures are midpoints of a single consolidated estimate and should be read as approximate. The reliable part is the ordering: eau de parfum leads, eau de toilette declines, extrait grows fastest from a small base.</p>
+  </div>
+
+  <div class="chart card">
+    <div class="chart-head">
+      <h3>Scent families in the Fragrantica dataset</h3>
+      <p>59,325 rated perfumes, read as enthusiast sentiment rather than sales</p>
+    </div>
+    <div class="chart-body">
+      <div class="accord-row">
+        <span class="swatch" style="background:#7d6136"></span>
+        <div><h5>Woody and earthy</h5><p>Consistently strong ratings, male skewed, high repeat mentions in reviews</p></div>
+        <span class="tag">Best rated</span>
+      </div>
+      <div class="accord-row">
+        <span class="swatch" style="background:#6d2136"></span>
+        <div><h5>Amber, vanilla and gourmand</h5><p>High ratings paired with heavy release volume, the most crowded launch space</p></div>
+        <span class="tag">Crowded</span>
+      </div>
+      <div class="accord-row">
+        <span class="swatch" style="background:#9d4a5f"></span>
+        <div><h5>Floral and white floral</h5><p>Largest family by count, female skewed, hardest place to be noticed</p></div>
+        <span class="tag">Highest volume</span>
+      </div>
+      <div class="accord-row">
+        <span class="swatch" style="background:#2b6354"></span>
+        <div><h5>Fresh, citrus and aromatic</h5><p>Year round wear and natural unisex framing, less defended at the top end</p></div>
+        <span class="tag">Open space</span>
+      </div>
+      <div class="accord-row">
+        <span class="swatch" style="background:#3f3670"></span>
+        <div><h5>Musk, powder and balsamic</h5><p>Smaller audience, unusually loyal, strong signal of repeat purchase</p></div>
+        <span class="tag">Loyal niche</span>
+      </div>
+    </div>
+    <p class="note">Ordering reflects average community rating against number of rated releases. Fragrantica users are not representative buyers, so read this as a map of enthusiast attention, which is where niche launches are discovered, not as a forecast of sales.</p>
+    <div class="slot" style="margin:0 38px 28px;">
+      <h5>Screenshot slot: agent output on scent family ratings</h5>
+      <p>Ask for average rating and release count per family, then paste the result here.</p>
+    </div>
+  </div>
+
+  <div class="sec-head" style="margin-top:56px;">
+    <h2 style="font-size:32px;">Who owns the <em>shelf</em></h2>
+    <div class="rule-sm"></div>
+  </div>
+  <div class="owners">
+    <div class="owner card" style="border-top-color:#6d2136">
+      <h5>L'Or&eacute;al</h5>
+      <p>Largest beauty group. Completed the Kering Beaut&eacute; purchase in March 2026.</p>
+      <p class="brands">Creed, Yves Saint Laurent, Armani, Valentino, Gucci from 2028</p>
+    </div>
+    <div class="owner card" style="border-top-color:#a96f23">
+      <h5>LVMH</h5>
+      <p>Owns its houses outright rather than licensing them, and owns Sephora.</p>
+      <p class="brands">Dior, Guerlain, Givenchy, Acqua di Parma, Maison Francis Kurkdjian</p>
+    </div>
+    <div class="owner card" style="border-top-color:#3f3670">
+      <h5>Est&eacute;e Lauder</h5>
+      <p>Built its niche position by acquisition. In talks with Puig as of early 2026.</p>
+      <p class="brands">Le Labo, Jo Malone London, Tom Ford, Fr&eacute;d&eacute;ric Malle, Kilian</p>
+    </div>
+    <div class="owner card" style="border-top-color:#2b6354">
+      <h5>Puig</h5>
+      <p>Family controlled, listed in 2024, strongest mid tier niche portfolio.</p>
+      <p class="brands">Byredo, Penhaligon's, L'Artisan Parfumeur, Rabanne, Jean Paul Gaultier</p>
+    </div>
+    <div class="owner card" style="border-top-color:#7d6136">
+      <h5>Coty</h5>
+      <p>Licence heavy model, which makes its portfolio less permanent than it looks.</p>
+      <p class="brands">Gucci until 2028, Burberry, Chlo&eacute;, Marc Jacobs, Hugo Boss</p>
+    </div>
+    <div class="owner card" style="border-top-color:#9d4a5f">
+      <h5>Independents</h5>
+      <p>The tier everyone else is trying to buy, and the tier a new house joins.</p>
+      <p class="brands">Diptyque, Parfums de Marly, Xerjoff, Amouage, Juliette Has a Gun</p>
+    </div>
+  </div>
+</section>
+
+<section id="limits">
+  <div class="sec-head">
+    <span class="eyebrow">Four</span>
+    <h2>What this brief <em>cannot</em> tell you</h2>
+    <p>Read before acting on anything above</p>
+    <div class="rule-sm"></div>
+  </div>
+
+  <div class="limit">
+    <h5>The dataset measures enthusiasm, not sales</h5>
+    <p>Fragrantica ratings come from a self selecting community of collectors. Complex and niche releases are rewarded, and widely bought mainstream scents often rate poorly. Nothing in the dataset should be read as a revenue signal.</p>
+  </div>
+  <div class="limit">
+    <h5>Analyst sizing is not comparable across firms</h5>
+    <p>Published 2026 estimates run from about $32B to well above $100B because firms count different things. Only the growth direction is safe to carry into a plan. A single point estimate would need primary research to defend.</p>
+  </div>
+  <div class="limit">
+    <h5>Asia Pacific evidence is thin where it matters most</h5>
+    <p>Regional growth is well established, but preference level detail for India and China is scarce in English language sources, and the dataset barely covers Asian houses. Growth forecasts are usable. Product decisions for those markets are not yet supportable.</p>
+  </div>
+  <div class="limit">
+    <h5>Social discovery is real but poorly measured</h5>
+    <p>Short form video clearly drives discovery among younger buyers, and several brands have credited it with demand spikes. Platform view counts and single campaign uplift figures circulate widely without verifiable methodology, so this brief does not rely on them.</p>
+  </div>
+  <div class="limit">
+    <h5>Clean and sustainable have no agreed definition</h5>
+    <p>Regulatory obligations on allergen disclosure are specific and checkable. Marketing claims about clean formulation are not, which creates both audit exposure and a credibility risk if the supply chain cannot support the claim.</p>
+  </div>
+</section>
+
+<section id="implications">
+  <div class="sec-head">
+    <span class="eyebrow">Five</span>
+    <h2>What to <em>do</em> with this</h2>
+    <p>Five moves the evidence supports, and four it does not</p>
+    <div class="rule-sm"></div>
+  </div>
+
+  <div class="impl">
+    <article class="card" style="border-top-color:#6d2136">
+      <h5>Launch at eau de parfum strength</h5>
+      <p>This is where share is moving and where margin holds. Add one extrait to reach the fastest growing concentration without betting the line on it.</p>
+    </article>
+    <article class="card" style="border-top-color:#a96f23">
+      <h5>Pick the family by space, not by rating</h5>
+      <p>Woody rates best and gourmand is hottest, but gourmand is also the most crowded launch space of the past three years. Fresh and aromatic is the least defended position at the premium end.</p>
+    </article>
+    <article class="card" style="border-top-color:#2b6354">
+      <h5>Earn in the West, test Asia online</h5>
+      <p>North America and Europe fund the business. Use direct online distribution to read Asia Pacific demand before spending on retail presence there.</p>
+    </article>
+    <article class="card" style="border-top-color:#3f3670">
+      <h5>Formulate for EU disclosure from batch one</h5>
+      <p>Allergen declaration and IFRA limits are known now. Reformulating a line already in market costs more than designing to the rules at the outset.</p>
+    </article>
+    <article class="card" style="border-top-color:#9d4a5f;grid-column:1/-1">
+      <h5>Treat independence as the asset being built</h5>
+      <p>The clearest lesson from recent deals is that large groups pay a premium for credible independent houses because they cannot originate them internally. Ownership structure, authorship and distribution discipline are strategic decisions rather than administrative ones, and they are also what makes the business saleable later.</p>
+    </article>
+  </div>
+
+  <div class="sec-head" style="margin-bottom:26px;">
+    <h2 style="font-size:30px;">Conclusions the evidence does <em>not</em> support</h2>
+    <div class="rule-sm"></div>
+  </div>
+  <div class="caution"><span class="mark">i</span><p>That high community ratings predict commercial success. The two correlate loosely at best, and distribution and awareness explain far more of the variance in sales.</p></div>
+  <div class="caution"><span class="mark">ii</span><p>That social video alone can carry a launch. Fragrance still converts on sampling, so discovery without a physical trial route tends to stall at intent.</p></div>
+  <div class="caution"><span class="mark">iii</span><p>That regional growth transfers to Western brands automatically. Gulf buyers favour oud and amber profiles, and Chinese consumers increasingly back domestic houses with local narratives.</p></div>
+  <div class="caution"><span class="mark">iv</span><p>That niche positioning scales indefinitely. Scarcity is part of what the premium pays for, and the Creed resale after two years shows how quickly a niche valuation can correct.</p></div>
+</section>
+
+<section id="summary">
+  <div class="sec-head">
+    <span class="eyebrow">Six</span>
+    <h2>For the leadership <em>meeting</em></h2>
+    <div class="rule-sm"></div>
+  </div>
+  <div class="summary">
+    <span class="script">The short version</span>
+    <div class="rule-sm"></div>
+    <p>Fine fragrance is growing at roughly <strong>5.5 to 6.8% a year</strong>, from about $56 to $68B in 2026 toward $89 to $93B by 2033, and seven independent forecasts agree on that direction even where they disagree on the absolute number. Growth is concentrated rather than general: <strong>eau de parfum is taking share, eau de toilette is losing it, extrait grows fastest</strong>, so the entry point should be premium concentration rather than mass.</p>
+    <p>The competitive picture changed materially this year. L'Or&eacute;al completed its &euro;4B acquisition of Kering Beaut&eacute; in March 2026, taking Creed and the future Gucci licence, while <strong>Est&eacute;e Lauder and Puig have confirmed merger talks</strong>, which leaves the mid tier consolidating around fewer buyers. Large groups keep acquiring independent houses instead of building them, the strongest available evidence that credible independence carries a real premium.</p>
+    <p>Geographically, <strong>North America remains about a third of revenue and Asia Pacific grows fastest</strong>, so the sensible sequence is to fund the launch in established markets and test Asia through online channels first. Confidence is high on direction and medium on sizing, and the honest recommendation is to commit to the premium tier and EU ready formulation now, while treating regional product decisions as open until better local data exists.</p>
+  </div>
+</section>
+
+<section id="dashboard">
+  <div class="sec-head">
+    <span class="eyebrow">Seven</span>
+    <h2>Decision <em>board</em></h2>
+    <p>One page for the people who will not read the rest</p>
+    <div class="rule-sm"></div>
+  </div>
+
+  <div class="dash">
+    <article class="card" style="border-top-color:#2b6354">
+      <h5>What we know</h5>
+      <ul>
+        <li>$56 to $68B in 2026, growing 5.5 to 6.8%</li>
+        <li>Eau de parfum leads and is gaining</li>
+        <li>Extrait grows fastest from a small base</li>
+        <li>North America is about a third of revenue</li>
+        <li>Groups are buying niche, not building it</li>
+      </ul>
+    </article>
+    <article class="card" style="border-top-color:#a96f23">
+      <h5>What we are unsure of</h5>
+      <ul>
+        <li>Absolute market size, scope dependent</li>
+        <li>Asian preference at product level</li>
+        <li>Premium paid for sustainability claims</li>
+        <li>Whether niche multiples hold after Creed</li>
+        <li>Durability of social discovery channels</li>
+      </ul>
+    </article>
+    <article class="card" style="border-top-color:#6d2136">
+      <h5>What we would do</h5>
+      <ul>
+        <li>Launch eau de parfum, add one extrait</li>
+        <li>Lead woody or fresh, avoid crowded gourmand</li>
+        <li>Fund in the West, test Asia online</li>
+        <li>Formulate to EU disclosure from batch one</li>
+        <li>Secure sampling before spending on reach</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="card scroll">
+    <table>
+      <thead><tr><th style="width:42%">Move</th><th>Impact</th><th>Effort</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td>Launch at eau de parfum concentration</td><td><span class="pill p-hi">High</span></td><td><span class="pill p-md">Medium</span></td><td><span class="pill p-lo">High</span></td></tr>
+        <tr><td>Add a single extrait flanker</td><td><span class="pill p-md">Medium</span></td><td><span class="pill p-lo">Low</span></td><td><span class="pill p-md">Medium</span></td></tr>
+        <tr><td>Choose family by competitive space</td><td><span class="pill p-hi">High</span></td><td><span class="pill p-lo">Low</span></td><td><span class="pill p-md">Medium</span></td></tr>
+        <tr><td>Online first entry into Asia Pacific</td><td><span class="pill p-md">Medium</span></td><td><span class="pill p-md">Medium</span></td><td><span class="pill p-md">Medium</span></td></tr>
+        <tr><td>EU compliant formulation from launch</td><td><span class="pill p-md">Medium</span></td><td><span class="pill p-md">Medium</span></td><td><span class="pill p-lo">High</span></td></tr>
+        <tr><td>Build sampling and physical trial routes</td><td><span class="pill p-hi">High</span></td><td><span class="pill p-hi">High</span></td><td><span class="pill p-lo">High</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="appendix">
+  <div class="sec-head">
+    <span class="eyebrow">Appendix</span>
+    <h2>The prompts that <em>worked</em></h2>
+    <div class="rule-sm"></div>
+  </div>
+
+  <div class="prompt card">
+    <h5>Market sizing</h5>
+    <blockquote>Give current global fine fragrance market size and forecast CAGR through 2033. For each figure, state which firm published it, the date, and exactly what the scope includes.</blockquote>
+    <p>Asking for scope alongside every number exposed why estimates differ by a factor of three, turning a confusing set of figures into a usable range.</p>
+  </div>
+
+  <div class="prompt card">
+    <h5>Competitive structure</h5>
+    <blockquote>List fragrance acquisitions and licence transfers by the major beauty groups since 2022, with deal value, date and current status. Mark anything still unconfirmed.</blockquote>
+    <p>Requiring a status flag kept rumoured deals separate from closed ones, which matters because the Est&eacute;e Lauder and Puig discussion is still only talks.</p>
+  </div>
+
+  <div class="prompt card">
+    <h5>Dataset analysis</h5>
+    <blockquote>In the Fragrantica dataset, rank scent families by average rating and by number of rated releases. Show where rating is high but release count is low.</blockquote>
+    <p>Asking for the gap between approval and supply surfaced open competitive space instead of simply confirming what is already popular.</p>
+  </div>
+
+  <div class="prompt card">
+    <h5>Synthesis</h5>
+    <blockquote>Write the brief for a leadership audience. For every claim, attach the source, a confidence level, and the specific finding that would overturn it.</blockquote>
+    <p>Building the falsification condition into the prompt forced the output to separate solid ground from inference, which is what makes the brief defensible in the room.</p>
+  </div>
+</section>
+
+<footer>
+  <span class="script">Fin</span>
+  Global fragrance market brief, September 2026, internal.<br>
+  Sources: Grand View Research, Persistence Market Research, Fortune Business Insights, Technavio, MarkWide, Scento, company filings, Fragrantica dataset.
+</footer>
+
+</main>
+</body>
+</html>
